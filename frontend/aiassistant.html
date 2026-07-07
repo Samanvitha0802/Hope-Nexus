@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Nexus AI Assistant</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        body{
+            background:#f5f7fb;
+        }
+
+        .chat-box{
+            height:500px;
+            overflow-y:auto;
+            scroll-behavior:smooth;
+        }
+
+        .user-message{
+
+            background:#2563eb;
+            color:white;
+
+            padding:12px;
+            border-radius:15px 15px 0px 15px;
+
+            max-width:75%;
+
+            margin-left:auto;
+
+            margin-top:15px;
+
+        }
+
+        .ai-message{
+
+            background:white;
+
+            padding:12px;
+
+            border-radius:15px 15px 15px 0px;
+
+            max-width:75%;
+
+            margin-top:15px;
+
+            box-shadow:0px 3px 10px rgba(0,0,0,.1);
+
+        }
+
+        .typing{
+
+            color:#16a34a;
+
+            font-style:italic;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="bg-white shadow">
+
+<div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+
+<div>
+
+<h1 class="text-4xl font-bold">
+
+HOPE NEXUS
+
+</h1>
+
+<p class="text-gray-500">
+
+AI Powered Community Welfare Platform
+
+</p>
+
+</div>
+
+<a href="index.html"
+
+class="bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700">
+
+Home
+
+</a>
+
+</div>
+
+</header>
+
+
+<!-- MAIN -->
+
+<div class="max-w-5xl mx-auto mt-10">
+
+
+<div class="bg-white rounded-xl shadow-lg">
+
+
+<!-- TOP -->
+
+<div class="bg-green-600 text-white p-6 rounded-t-xl">
+
+<h2 class="text-3xl font-bold">
+
+🤖 Hope Nexus AI Assistant
+
+</h2>
+
+<p class="mt-2">
+
+Ask anything about Healthcare,
+Education,
+Jobs,
+Career Guidance,
+or Tribal Knowledge.
+
+</p>
+
+</div>
+
+
+<!-- CHAT AREA -->
+
+<div
+
+id="chatBox"
+
+class="chat-box p-6"
+
+>
+
+<div class="ai-message">
+
+👋 Hello!
+
+<br><br>
+
+I'm Hope Nexus AI Assistant.
+
+<br><br>
+
+I can help you with:
+
+<ul class="list-disc ml-6 mt-2">
+
+<li>Healthcare Guidance</li>
+
+<li>Educational Support</li>
+
+<li>Career Advice</li>
+
+<li>Job Recommendations</li>
+
+<li>Tribal Knowledge</li>
+
+</ul>
+
+<br>
+
+Ask me anything 😊
+
+</div>
+
+</div>
+
+
+<!-- INPUT -->
+
+<div class="border-t p-5">
+
+<div class="flex gap-3">
+
+<input
+
+id="userInput"
+
+type="text"
+
+placeholder="Type your question..."
+
+class="flex-1 border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+
+>
+
+<button
+
+onclick="sendMessage()"
+
+class="bg-green-600 hover:bg-green-700 text-white px-8 rounded-lg">
+
+<i class="fas fa-paper-plane"></i>
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="aiassistant.js"></script>
+
+</body>
+
+</html>

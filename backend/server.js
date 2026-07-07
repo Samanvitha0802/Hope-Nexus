@@ -30,6 +30,10 @@ app.use("/api/jobs", jobRoutes);
 const tribeRoutes = require("./routes/tribeRoutes");
 app.use("/api/tribes", tribeRoutes);
 
+
+const aiRoutes = require("./routes/aiRoutes");
+app.use("/api/ai", aiRoutes);
+
 const PORT = 5000;
 
 app.listen(PORT, () => {
